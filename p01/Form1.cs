@@ -16,5 +16,11 @@ namespace p01
         {
             InitializeComponent();
         }
+
+        private void buttonExecute_Click(object sender, EventArgs e)
+        {
+            DateTime dt = DateTime.Now;
+            MessageBox.Show(String.Format($"Dnes je {dt:D}. Je to {dt.DayOfYear}. den v roce. Je {dt.Hour} hodin {dt.Minute} minut a {dt.Second} sekund"));
+        }
     }
 }
