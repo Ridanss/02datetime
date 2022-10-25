@@ -22,7 +22,11 @@ namespace p02
             DateTime dt = DateTime.Now;
             DateTime birth = dateTimePicker1.Value;
             TimeSpan age = dt - birth;
-            labelAge.Text = String.Format("Jsi starý {0}", age.ToString("f"));
+            if ()
+            int year = age.TotalDays/365
+            int month = dt.Month - birth.Month;
+
+            labelAge.Text = string.Format($"Věk je ");
         }
     }
 }
