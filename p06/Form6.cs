@@ -21,7 +21,7 @@ namespace p06
         public static int PocetDni(int year,DateTime birth)
         {
             DateTime today = DateTime.Now;
-            birth=birth.AddYears(year);
+            birth = birth.AddYears(year);
             TimeSpan daycount = today - birth;
             return daycount.Days;
         }
