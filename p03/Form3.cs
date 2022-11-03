@@ -83,7 +83,7 @@ namespace p03
             return true;
         }
 
-        /*public bool JeRodneCislo(string rcislo,out DateTime narozen, out string zprava)
+        public bool JeRodneCislo(string rcislo,out DateTime narozen, out string zprava)
         {
             zprava = "Rodné číslo je správné.";
             narozen= new DateTime();
@@ -109,10 +109,10 @@ namespace p03
                 zprava = "Špatné rodné číslo.";
                 return false;
             }
-
+            return true;
             
 
-        }*/
+        }
 
         public int Vek(DateTime birth,out int days)
         {

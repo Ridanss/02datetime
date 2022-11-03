@@ -20,7 +20,7 @@ namespace p05
         private void button1_Click(object sender, EventArgs e)
         {
             int lines = textBox1.Lines.Count();
-            DateTime max = DateTime.Now;
+            DateTime oldest = DateTime.Now;
             int maxI = 0;
             DateTime current;
             string[] person;
@@ -28,9 +28,9 @@ namespace p05
             {
                 person = textBox1.Lines[i].Split(';');
                 current = Convert.ToDateTime(person[2]);
-                if (current < max)
+                if (current < oldest)
                 {
-                    max = current;
+                    oldest = current;
                     maxI = i;
                 }
             }
