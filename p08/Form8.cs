@@ -23,7 +23,11 @@ namespace p08
 
             TimeSpan left = today - (bought.AddYears(years));
             timeleft = left.Days;
-            if (timeleft < 0) return true;
+            if (timeleft < 0)
+            {
+                timeleft *= -1;
+                return true;
+            }
             return false;
 
         }
@@ -34,7 +38,7 @@ namespace p08
                 labelInsurance.Text = "záruka: ";
                 DateTime bought = dateTimePicker1.Value;
                 bool zaruka = ZarukaRoky(bought, let, out int zbyva);
-                if (zaruka) labelInsurance.Text += "Zbývá " + Math.Abs(zbyva) + " dní";
+                if (zaruka) labelInsurance.Text += "Zbývá " + zbyva + " dní";
                 else labelInsurance.Text += "Vypršela";
             }
 
