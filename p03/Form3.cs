@@ -45,7 +45,10 @@ namespace p03
             }
             else
             {
-                
+                if (JeRodneCislo(labelBirth.Text, out DateTime birth, out string report))
+                {
+                    labelReport.Text += report;
+                }
             }
 
         }
